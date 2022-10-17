@@ -63,16 +63,16 @@ class Top extends React.Component {
                 <div className='top-sns'>
                     <h2 className='title-center'>SNS</h2>
                     <div className='sns-icons'>
-                        <a href='https://twitter.com/kalulu_nya' className='twitter-icon sns-icon'><FaTwitterSquare /></a>
-                        <a href='http://www.youtube.com/channel/UCUTIT3Kj9mrdyMvR6EEY6IQ?sub_confirmation=1' className='youtube-icon sns-icon'><FaYoutubeSquare /></a>
-                        <a href='https://lin.ee/9DzGkyr' className='line-icon sns-icon'><FaLine /></a>
+                        <a href='https://twitter.com/kalulu_nya' target="_blank" rel="noopener noreferrer" className='twitter-icon sns-icon'><FaTwitterSquare /></a>
+                        <a href='http://www.youtube.com/channel/UCUTIT3Kj9mrdyMvR6EEY6IQ?sub_confirmation=1' target="_blank" rel="noopener noreferrer" className='youtube-icon sns-icon'><FaYoutubeSquare /></a>
+                        <a href='https://lin.ee/9DzGkyr' target="_blank" rel="noopener noreferrer" className='line-icon sns-icon'><FaLine /></a>
                     </div>
                     <div className='sns-banners'>
                         <div className='sns-banners-block'>
-                            <a className="btn fantia sns-banner" target="_blank" href="https://lineblog.me/enakorin/" rel="noopener noreferrer" style={{ 'opacity': '1;' }}>
+                            <a className="btn fantia sns-banner" target="_blank" href="https://fantia.jp/fanclubs/65018" rel="noopener noreferrer" style={{ 'opacity': '1;' }}>
                                 <img className='sns-banner-img' src={FantiaBanner} alt="Official Fantia"></img>
                             </a>
-                            <a className="btn instagram sns-banner" target="_blank" href="https://lineblog.me/enakorin/" rel="noopener noreferrer" style={{ 'opacity': '1;' }}>
+                            <a className="btn instagram sns-banner" target="_blank" href="https://www.instagram.com/kalulu_nya" rel="noopener noreferrer" style={{ 'opacity': '1;' }}>
                                 <img className='sns-banner-img' src={InstagramBanner} alt="Official Instagram"></img>
                             </a>
                         </div>
