@@ -351,6 +351,7 @@ p.general {
 /* Profile */
 .top-profile {
     width: 100vw;
+    padding-top: 20px
 }
 
 .top-profile-contents {
@@ -479,6 +480,8 @@ p.dots-background::after {
 /* SNS */
 .top-sns {
     background-color: #fffce6;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .sns-icons {

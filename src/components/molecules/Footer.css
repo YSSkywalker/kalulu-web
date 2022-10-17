@@ -1,0 +1,12 @@
+footer {
+    text-align: center;
+    background-color: rgb(64, 64, 64);
+    padding: 6px 0;
+}
+.footer-content {
+    color: #ffffff;
+}
+.footer-link {
+    text-decoration: none;
+    color: #ffffff;
+}
