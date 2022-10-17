@@ -352,7 +352,7 @@ p.general {
 .top-profile {
     width: 100vw;
     padding-top: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 .top-profile-contents {
@@ -476,6 +476,23 @@ p.dots-background::after {
 .profile-info-block {
     width: 500px;
     max-width: 100%;
+}
+
+/* Works */
+.top-works {
+padding: 10px 0 20px 0;
+background-color: #ffefd8;
+}
+.works-contents {
+    width: 100vw
+}
+.youtube-window {
+    display: block;
+    max-width: 560px;
+    width: 80vw;
+    max-height: 315px;
+    height: 45vw;
+    margin: 0 auto;
 }
 
 /* SNS */

@@ -61,6 +61,12 @@ class EN extends React.Component {
                         </div>
                     </div>
                 </div>
+                <div className='top-works'>
+                    <div className='works-contents'></div>
+                        <h2 className='title-center'>Works</h2>
+                    <iframe src="https://www.youtube.com/embed/DEVZRDsSsNA" className='youtube-window' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
                 <div className='top-sns'>
                     <h2 className='title-center'>SNS</h2>
                     <div className='sns-icons'>
