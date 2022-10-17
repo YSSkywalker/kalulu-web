@@ -8,7 +8,7 @@ import ProfileImage from './img/profile-image.JPG'
 import FantiaBanner from './img/fantia-banner.png'
 import InstagramBanner from './img/instagram-banner.png'
 
-class Top extends React.Component {
+class EN extends React.Component {
     render() {
         return (
             <div>
@@ -54,9 +54,9 @@ class Top extends React.Component {
                                 </section>
                             </div>
                             <div class="profile-box profile-info-block">
-                                <p className='profile-name'>雪丸かるる</p>
-                                <p className='profile-detail'>会社員をしながらコスプレとYouTubeの活動に勤しんでいる。時間が足りなくて毎晩泣いている。</p>
-                                <p className='profile-detail'>A型 6月28日生まれ</p>
+                                <p className='profile-name'>Kalulu Yukimaru</p>
+                                <p className='profile-detail'>She works as an office worker and works on her cosplay and YouTube activities. She cries every night about the lack of time.</p>
+                                <p className='profile-detail'>Born on June 28th</p>
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@ class Top extends React.Component {
                 <div className='top-sns'>
                     <h2 className='title-center'>SNS</h2>
                     <div className='sns-icons'>
-                        <a href='https://twitter.com/kalulu_nya' target="_blank" rel="noopener noreferrer" className='twitter-icon sns-icon'><FaTwitterSquare /></a>
+                        <a href='https://twitter.com/kaluluyukimaru' target="_blank" rel="noopener noreferrer" className='twitter-icon sns-icon'><FaTwitterSquare /></a>
                         <a href='http://www.youtube.com/channel/UCUTIT3Kj9mrdyMvR6EEY6IQ?sub_confirmation=1' target="_blank" rel="noopener noreferrer" className='youtube-icon sns-icon'><FaYoutubeSquare /></a>
                         <a href='https://lin.ee/9DzGkyr' target="_blank" rel="noopener noreferrer" className='line-icon sns-icon'><FaLine /></a>
                     </div>
@@ -79,7 +79,7 @@ class Top extends React.Component {
                         </div>
                     </div>
                     <div className='language-link-block'>
-                        <p><Link to="/EN" className='language-link vertical-align-middle'>English <FaAngleRight className='vertical-align-middle' /></Link></p>
+                        <p><Link to="/" className='language-link vertical-align-middle'>日本語 <FaAngleRight className='vertical-align-middle' /></Link></p>
                     </div>
                 </div>
             </div>
@@ -87,4 +87,4 @@ class Top extends React.Component {
     }
 }
 
-export default Top
+export default EN

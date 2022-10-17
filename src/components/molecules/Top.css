@@ -481,7 +481,7 @@ p.dots-background::after {
 /* SNS */
 .top-sns {
     background-color: #fffce6;
-    padding-bottom: 20px;
+    padding-bottom: 2px;
     padding-top: 20px;
 }
 
@@ -508,6 +508,7 @@ p.dots-background::after {
 .sns-banners {
     max-width: 100%;
 }
+
 .sns-banners-block {
     max-width: 630px;
     width: 100%;
@@ -525,6 +526,7 @@ p.dots-background::after {
     .fantia {
         margin-bottom: 15px;
     }
+
     .sns-banner {
         margin-left: calc((100vw - 295px)/2);
     }
@@ -541,4 +543,20 @@ p.dots-background::after {
 
 img.sns-banner-img {
     width: 100%;
+}
+
+.language-link-block {
+    text-align: right;
+    padding: 0 30px;
+}
+
+.language-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.vertical-align-middle {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
