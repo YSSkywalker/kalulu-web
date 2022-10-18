@@ -8,6 +8,7 @@ import Top from './components/molecules/Top'
 import EN from './components/molecules/EN'
 import Matome from './components/molecules/Matome'
 import News from './components/molecules/News'
+import NotFound from './components/molecules/NotFound'
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path={'/EN'} element={<EN />} />
         <Route path={'/Matome'} element={<Matome />} />
         <Route path={'/News'} element={<News />} />
+        <Route path={'/*'} element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>

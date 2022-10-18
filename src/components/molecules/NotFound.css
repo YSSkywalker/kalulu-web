@@ -1,0 +1,23 @@
+.not-found-body {
+    height: calc(100vh - 82px - 33.2px);
+}
+.not-found-title {
+    text-align: center;
+    font-size: 40px;
+}
+.not-found-detail {
+    margin: 0 auto;
+    width: 80%;
+}
+.image-404 {
+    display: block;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 80vw;
+}
+
+@media (max-width: 750px) {
+    .image-404 {
+        margin-top: calc((100vh - 82px - 33.2px - 47px - 38px - 16px - 80vw * 867 / 1165)/2);
+    }
+}
