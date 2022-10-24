@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Footer from './components/molecules/Footer'
 
 import ScrollToTop from './components/molecules/ScrollToTop'
+import UseTracking from './components/molecules/UseTracking'
 import Top from './components/molecules/Top'
 import EN from './components/molecules/EN'
 import Matome from './components/molecules/Matome'
@@ -13,7 +14,8 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
+      <UseTracking />
       <ScrollToTop />
       <Routes>
         <Route exact path={`/`} element={<Top />} />
@@ -23,7 +25,7 @@ function App() {
         <Route path={'/*'} element={<NotFound />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </Router>
   );
 }
 
