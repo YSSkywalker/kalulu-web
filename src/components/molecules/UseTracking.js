@@ -3,12 +3,7 @@ import { useLocation } from "react-router-dom";
 import ReactGA from "react-ga4";
 
 export default function UseTracking() {
-  var googleMeasurementId;
-  if (process.env.NODE_ENV !== 'production') {
-    googleMeasurementId = process.env.REACT_APP_GOOGLE_ANALYTICS_MEASUREMENT_ID;
-  } else {
-    googleMeasurementId = process.env.GOOGLE_ANALYTICS_MEASUREMENT_ID;
-  }
+  var googleMeasurementId = process.env.REACT_APP_GOOGLE_ANALYTICS_MEASUREMENT_ID;
 
   const location = useLocation();
 
