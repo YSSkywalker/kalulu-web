@@ -2,6 +2,12 @@
 [雪丸かるるのWEBページ](https://kalulu.fans)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5ce6d38c-cb9d-4692-b162-865585ef243e/deploy-status)](https://app.netlify.com/sites/kalulu/deploys)
 
+## Environmental Variable
+
+|  KEY  |  VALUE  |
+| ---- | ---- |
+|  REACT_APP_GOOGLE_ANALYTICS_MEASUREMENT_ID  |  `G-**********`  |
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
