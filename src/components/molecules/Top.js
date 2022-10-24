@@ -26,17 +26,10 @@ class Top extends React.Component {
                                 {/* <!-- Page Content --> */}
                                 <div className="container">
                                     <div className="row social-row">
-                                        {/* <a href="#" target="_blank" class="d-none" style="background-image: url(https://i.ibb.co/k0JQYv4/instagram-social-button.png)"></a> */}
-
                                     </div>
                                     <div className="row">
                                         <div className="col-lg-12 text-center">
-                                            {/* <img class="logo" src="https://i.ibb.co/J2tzs0F/five-bells-logo.png" alt="Five Bells logo"></img> */}
                                             <h1 className="text-uppercase black-text countach top-name-kalulu">Kalulu Yukimaru</h1>
-                                            {/* <p class="lead skintone-text">
-                                                <span class="name skintone-text countach">Add your own washed</span>
-                                                <span class="place skintone-text tilda-petite">Creative Logo</span>
-                                            </p> */}
                                         </div>
                                     </div>
                                 </div>
@@ -53,7 +46,7 @@ class Top extends React.Component {
                                     <p className='dots-background'><img src={ProfileImage} alt="profile" className='profile-image'></img></p>
                                 </section>
                             </div>
-                            <div class="profile-box profile-info-block">
+                            <div className="profile-box profile-info-block">
                                 <p className='profile-name'>雪丸かるる</p>
                                 <p className='profile-detail'>会社員をしながらコスプレとYouTubeの活動に勤しんでいる。時間が足りなくて毎晩泣いている。</p>
                                 <p className='profile-detail'>A型 6月28日生まれ</p>
@@ -64,7 +57,7 @@ class Top extends React.Component {
                 <div className='top-works'>
                     <div className='works-contents'></div>
                         <h2 className='title-center'>Works</h2>
-                    <iframe src="https://www.youtube.com/embed/DEVZRDsSsNA" className='youtube-window' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    <iframe src="https://www.youtube-nocookie.com/embed/DEVZRDsSsNA" className='youtube-window' title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
                     </iframe>
                 </div>
                 <div className='top-sns'>
@@ -76,10 +69,10 @@ class Top extends React.Component {
                     </div>
                     <div className='sns-banners'>
                         <div className='sns-banners-block'>
-                            <a className="btn fantia sns-banner" target="_blank" href="https://fantia.jp/fanclubs/65018" rel="noopener noreferrer" style={{ 'opacity': '1;' }}>
+                            <a className="btn fantia sns-banner" target="_blank" href="https://fantia.jp/fanclubs/65018" rel="noopener noreferrer" style={{ 'opacity': '1' }}>
                                 <img className='sns-banner-img' src={FantiaBanner} alt="Official Fantia"></img>
                             </a>
-                            <a className="btn instagram sns-banner" target="_blank" href="https://www.instagram.com/kalulu_nya" rel="noopener noreferrer" style={{ 'opacity': '1;' }}>
+                            <a className="btn instagram sns-banner" target="_blank" href="https://www.instagram.com/kalulu_nya" rel="noopener noreferrer" style={{ 'opacity': '1' }}>
                                 <img className='sns-banner-img' src={InstagramBanner} alt="Official Instagram"></img>
                             </a>
                         </div>
