@@ -24,7 +24,7 @@ class News extends React.Component {
                     <div className='app-overview-item'>
                         <div className='app-icon'>
                             {/* アイコン */}
-                            <img className='app-icon-img' src={CosFesIcon}></img>
+                            <img className='app-icon-img' src={CosFesIcon} alt='the icon of CosFes'></img>
                         </div>
                     </div>
                     <div className='app-overview-item app-overview-item-description'>
