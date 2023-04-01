@@ -13,7 +13,7 @@ class News extends React.Component {
         return (
             <div>
                 <div className='app-dummy-header'>
-                    <img className='kalulu-cat-logo' src={KaluluCat}></img>
+                    <img className='kalulu-cat-logo' alt='A logo of Kalulu Cat' src={KaluluCat}></img>
                 </div>
                 <div className='cos-fes'>
                     <div>
