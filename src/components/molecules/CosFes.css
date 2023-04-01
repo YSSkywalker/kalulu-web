@@ -1,0 +1,171 @@
+.cos-fes {
+    max-width: 980px;
+    min-height: calc(100vh - 80px - 15px);
+    width: 90vw;
+    margin: 0px auto;
+}
+
+.app-gray {
+    color: #1D1D1F;
+}
+
+.app-light-gray {
+    color: #4C4C50;
+}
+
+.app-blue {
+    color: #0070C9;
+}
+
+.app-small-font {
+    font-size: 13px;
+}
+
+.app-very-small-font {
+    font-size: 11px;
+}
+
+.app-notification-bg {
+    background-color: #F2F8FC;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+.app-notification {
+    font-size: 13px;
+    text-align: center;
+    margin: 0px;
+}
+
+.app-icon {
+    max-height: 230px;
+    max-width: 230px;
+    height: 35vw;
+    width: 35vw;
+}
+
+.app-icon-img {
+    max-height: 230px;
+    max-width: 230px;
+    height: 35vw;
+    width: 35vw;
+    border-radius: 30px;
+}
+
+.app-overview-contents {
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.app-overview-item {
+    float: left;
+}
+
+.app-overview-item-description {
+    margin-left: 20px;
+}
+
+.app-title {
+    margin-bottom: 5px;
+}
+
+.app-developer {
+    margin-top: 5px;
+}
+
+.no-margin {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+.slide-wrap {
+    display: flex;
+    margin: 0 auto;
+    /* max-width: 1024px; */
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.slide-box {
+    height: auto;
+    margin: 0.5% 1%;
+    width: 313px;
+    flex: 0 0 33%;
+}
+
+.slide-box img {
+    display: block;
+    height: auto;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.slide-box iframe {
+    display: block;
+    height: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.app-rate span {
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.rate-comment-contents {
+    overflow: hidden;
+}
+
+.rate-comment-content {
+    background-color: #F8F8F8;
+    width: 310px;
+    max-width: calc(90vw - 40px);
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    float: left;
+}
+
+.rate-star {
+    color: #BFBFBF;
+    font-size: 30px;
+    margin: 0px auto;
+}
+
+.rate-star span {
+    color: #ffa940;
+}
+
+.app-rate-title {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* スマホサイズでスライダー表示 */
+    .slide-wrap {
+        overflow-x: scroll;
+    }
+
+    .slide-box {
+        flex: 0 0 70%;
+        margin: auto 3% auto auto;
+    }
+
+    .slide-box iframe {
+        height: 35vw;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .app-overview-item-description {
+        max-width: calc(55vw - 20px);
+    }
+
+    .app-title {
+        font-size: 20px;
+    }
+}
