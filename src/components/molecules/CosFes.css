@@ -25,6 +25,17 @@
     font-size: 11px;
 }
 
+.app-dummy-header {
+    background-color: #FAFAFC;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.kalulu-cat-logo {
+    height: 25px;
+}
+
 .app-notification-bg {
     background-color: #F2F8FC;
     padding: 8px 10px;
