@@ -10,6 +10,8 @@ import EN from './components/molecules/EN'
 import Matome from './components/molecules/Matome'
 import News from './components/molecules/News'
 import CosFes from './components/molecules/CosFes'
+import PhotoBookInventoryTable from './components/molecules/PhotoBookInventoryTable'
+import RegisterPhotoBook from './components/molecules/RegisterPhotoBook'
 import NotFound from './components/molecules/NotFound'
 import './App.css';
 
@@ -24,6 +26,8 @@ function App() {
         <Route path={'/Matome'} element={<Matome />} />
         <Route path={'/News'} element={<News />} />
         <Route path={'/CosFes'} element={<CosFes />} />
+        <Route path={'/PhotoBookInventoryTable'} element={<PhotoBookInventoryTable />} />
+        <Route path={'/RegisterPhotoBook'} element={<RegisterPhotoBook />} />
         <Route path={'/*'} element={<NotFound />} />
       </Routes>
       <Footer />
