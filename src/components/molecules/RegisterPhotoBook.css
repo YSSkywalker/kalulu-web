@@ -24,3 +24,9 @@ button {
 .register-photo-book {
     min-height: calc(100vh - 82px);
 }
+
+button:disabled {
+    background-color: #c0c0c0; /* グレーの背景色 */
+    color: #e0e0e0; /* 薄いグレーの文字色 */
+    cursor: not-allowed; /* カーソルを"許可しない"マークに変更 */
+}

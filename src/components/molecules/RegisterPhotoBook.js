@@ -42,18 +42,37 @@ class RegisterPhotoBook extends Component {
                 <h1 className='photo-book-title'>La Prima Stella</h1>
                 <div className="buttons-container">
                     <div className="button-row">
-                        <button onClick={() => this.handleButtonClick({ type: "register", photoBookName: "Halley", SellingPrice: 1500 })}>
-                            Halley ({this.state.halleyStockNum} 冊)<br />売上
+                        <button
+                            onClick={() => this.handleButtonClick({ type: "register", photoBookName: "Halley", SellingPrice: 1500 })}
+                            disabled={this.state.halleyStockNum === 0}
+                        >
+                            Halley ({this.state.halleyStockNum} 冊)<br />
+                            {this.state.halleyStockNum === 0 ?
+                                <span className='sold-out'>売り切れ</span> :
+                                `売上`}
                         </button>
-                        <button onClick={() => this.handleButtonClick({ type: "register", photoBookName: "d'Arrest", SellingPrice: 1600 })}>
-                            d'Arrest ({this.state.dArrestStockNum} 冊)<br />売上
+
+                        <button
+                            onClick={() => this.handleButtonClick({ type: "register", photoBookName: "d'Arrest", SellingPrice: 1600 })}
+                            disabled={this.state.dArrestStockNum === 0}
+                        >
+                            d'Arrest ({this.state.dArrestStockNum} 冊)<br />
+                            {this.state.dArrestStockNum === 0 ?
+                                <span className='sold-out'>売り切れ</span> :
+                                `売上`}
                         </button>
                     </div>
                     <div className="button-row">
-                        <button onClick={() => this.handleButtonClick({ type: "register", photoBookName: "Halley", SellingPrice: 0 })}>
+                        <
+                            button onClick={() => this.handleButtonClick({ type: "register", photoBookName: "Halley", SellingPrice: 0 })}
+                            disabled={this.state.halleyStockNum === 0}
+                        >
                             Halley 交換
                         </button>
-                        <button onClick={() => this.handleButtonClick({ type: "register", photoBookName: "d'Arrest", SellingPrice: 0 })}>
+                        <
+                            button onClick={() => this.handleButtonClick({ type: "register", photoBookName: "d'Arrest", SellingPrice: 0 })}
+                            disabled={this.state.dArrestStockNum === 0}
+                        >
                             d'Arrest 交換
                         </button>
                     </div>
