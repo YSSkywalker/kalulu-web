@@ -7,6 +7,7 @@ class PhotoBookInventoryTable extends Component {
         this.state = {
             inventoryData: [],
             isLoading: true,
+            currentDate: new Date(), // currentDateをstateに追加
         };
     }
 
@@ -21,6 +22,7 @@ class PhotoBookInventoryTable extends Component {
                 this.setState({
                     inventoryData: data.data,
                     isLoading: false,
+                    currentDate: new Date(), // ここでcurrentDateを更新
                 });
             })
             .catch((error) => {
@@ -28,20 +30,52 @@ class PhotoBookInventoryTable extends Component {
             });
     }
 
+    // formatDateをクラスのメソッドとして移動
+    formatDate(date) {
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1;
+        const day = date.getDate();
+        const hours = date.getHours();
+        const minutes = date.getMinutes();
+
+        return `${year}年${month}月${day}日 ${hours}時${minutes}分 現在`;
+    }
+
     render() {
-        const { inventoryData, isLoading } = this.state;
+        const { inventoryData, isLoading, currentDate } = this.state;
 
         if (isLoading) {
             return (
                 <div className='photo-book-inventory'>
-                    <p>Loading...</p>
+                    <h1 className='text-center'>La Prima Stella</h1>
+                    <h3 className='text-center'>管理表</h3>
+                    <p className='text-center'>Loading...</p>
+                    <table className='photo-book-table'>
+                        <thead>
+                            <tr>
+                                <th>商品名</th>
+                                <th>値段</th>
+                                <th>在庫数</th>
+                            </tr>
+                        </thead>
+                        {/* <tbody>
+                            <tr>
+                                <td>Loading...</td>
+                                <td>Loading...</td>
+                                <td>Loading...</td>
+                            </tr>
+                        </tbody> */}
+                    </table>
                 </div>
             );
         }
 
         return (
             <div className='photo-book-inventory'>
-                <table>
+                <h1 className='text-center'>La Prima Stella</h1>
+                <h3 className='text-center'>管理表</h3>
+                <p className='text-center'>{this.formatDate(currentDate)}</p>
+                <table className='photo-book-table'>
                     <thead>
                         <tr>
                             <th>商品名</th>
@@ -53,8 +87,12 @@ class PhotoBookInventoryTable extends Component {
                         {inventoryData.map((item, index) => (
                             <tr key={index}>
                                 <td>{item['商品名']}</td>
-                                <td>{item['値段']}</td>
-                                <td>{item['在庫数']}</td>
+                                <td>{item['値段']} 円</td>
+                                <td>
+                                    {item['在庫数'] === 0 ?
+                                        <span className='sold-out'>売り切れ</span> :
+                                        `${item['在庫数']} 冊`}
+                                </td>
                             </tr>
                         ))}
                     </tbody>
