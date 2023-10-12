@@ -1,0 +1,40 @@
+.sns-section {
+    min-height: calc(100vh - 82px);
+}
+
+.sns-links {
+    display: flex;
+    flex-direction: column;
+    /* ここをcolumnに変更して縦並びにします */
+    align-items: center;
+    /* センタリングのためのスタイルを追加 */
+    gap: 20px;
+    /* 各リンクの間隔を設定 */
+    padding: 20px;
+}
+
+.sns-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #eee;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+    width: 80%;
+    /* 必要に応じて幅を調整 */
+    max-width: 300px;
+    justify-content: center;
+    /* アイコンとテキストをセンタリング */
+}
+
+.sns-item:hover {
+    background-color: #f0f0f0;
+}
+
+.sns-icon {
+    width: 30px;
+    height: 30px;
+}
