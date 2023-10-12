@@ -31,10 +31,23 @@
 }
 
 .sns-item:hover {
-    background-color: #f0f0f0;
+    background-color: #333;
 }
 
 .sns-icon {
     width: 30px;
     height: 30px;
+}
+
+.sns-item span {
+    opacity: 0; /* 非表示に設定 */
+    width: 0; /* 幅を0に設定して非表示に */
+    overflow: hidden; /* 余分な領域を非表示に */
+    transition: opacity 0.3s, width 0.3s; /* アニメーション効果を追加 */
+    white-space: nowrap; /* 文字を一行に収める */
+}
+
+.sns-item:hover span {
+    opacity: 1; /* マウスオーバーで表示 */
+    width: auto; /* 必要な幅に自動的に拡張 */
 }
