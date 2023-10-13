@@ -1,5 +1,33 @@
 .sns-section {
-    min-height: calc(100vh - 82px);
+    min-height: calc(100vh - 80px);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.image-wrapper {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 4vh;
+  }
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-label {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .sns-links {
@@ -40,14 +68,21 @@
 }
 
 .sns-item span {
-    opacity: 0; /* 非表示に設定 */
-    width: 0; /* 幅を0に設定して非表示に */
-    overflow: hidden; /* 余分な領域を非表示に */
-    transition: opacity 0.3s, width 0.3s; /* アニメーション効果を追加 */
-    white-space: nowrap; /* 文字を一行に収める */
+    opacity: 0;
+    /* 非表示に設定 */
+    width: 0;
+    /* 幅を0に設定して非表示に */
+    overflow: hidden;
+    /* 余分な領域を非表示に */
+    transition: opacity 0.3s, width 0.3s;
+    /* アニメーション効果を追加 */
+    white-space: nowrap;
+    /* 文字を一行に収める */
 }
 
 .sns-item:hover span {
-    opacity: 1; /* マウスオーバーで表示 */
-    width: auto; /* 必要な幅に自動的に拡張 */
+    opacity: 1;
+    /* マウスオーバーで表示 */
+    width: auto;
+    /* 必要な幅に自動的に拡張 */
 }
