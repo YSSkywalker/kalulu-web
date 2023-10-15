@@ -28,8 +28,8 @@ class Top extends React.Component {
                                     <div className="row social-row">
                                     </div>
                                     <div className="row">
-                                        <div className="col-lg-12 text-center">
-                                            <h1 className="text-uppercase black-text countach top-name-kalulu">Kalulu Yukimaru</h1>
+                                        <div>
+                                            <h1 className="top-name-kalulu black-text countach">Kalulu Yukimaru</h1>
                                         </div>
                                     </div>
                                 </div>
