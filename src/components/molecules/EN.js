@@ -23,20 +23,13 @@ class EN extends React.Component {
                                 <img className="vertical-decoration top" alt='edge decoration' src="https://i.ibb.co/JRTK9z4/horizontally-centered-vertical-decoration.png"></img>
                                 <img className="vertical-decoration bottom" alt='edge decoration' src="https://i.ibb.co/JRTK9z4/horizontally-centered-vertical-decoration.png"></img>
 
-                                {/* <!-- Page Content --> */}
                                 <div className="container">
                                     <div className="row social-row">
-                                        {/* <a href="#" target="_blank" class="d-none" style="background-image: url(https://i.ibb.co/k0JQYv4/instagram-social-button.png)"></a> */}
 
                                     </div>
                                     <div className="row">
-                                        <div className="col-lg-12 text-center">
-                                            {/* <img class="logo" src="https://i.ibb.co/J2tzs0F/five-bells-logo.png" alt="Five Bells logo"></img> */}
-                                            <h1 className="text-uppercase black-text countach top-name-kalulu">Kalulu Yukimaru</h1>
-                                            {/* <p class="lead skintone-text">
-                                                <span class="name skintone-text countach">Add your own washed</span>
-                                                <span class="place skintone-text tilda-petite">Creative Logo</span>
-                                            </p> */}
+                                        <div>
+                                            <h1 className="top-name-kalulu black-text countach">Kalulu Yukimaru</h1>
                                         </div>
                                     </div>
                                 </div>

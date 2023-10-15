@@ -1,15 +1,10 @@
 import React from 'react';
-import InstagramEmbed from 'react-instagram-embed';
 import {TwitterTweetEmbed} from 'react-twitter-embed';
 import { Helmet } from "react-helmet";
-// import { Link } from 'react-router-dom'
 import './Matome.css';
 
 class Matome extends React.Component {
     render() {
-        const appID = '1069627267143243';
-        const clientToken = 'e128963b9054b9647fcb956945f85154';
-        const clientAccessToken = `${appID}|${clientToken}`
         return (
             <div>
                 <Helmet
@@ -64,21 +59,6 @@ class Matome extends React.Component {
                     <div>
                         <div className="matome-sub-title-box">
                             <p className="matome-sub-title">雪丸かるるのプロフィール</p>
-                        </div>
-                        <div className="instagram-picture">
-                            <InstagramEmbed
-                              url='https://www.instagram.com/p/CCKxlNHBely/?utm_source=ig_web_copy_link'
-                              clientAccessToken={clientAccessToken}
-                              maxWidth={undefined}
-                              hideCaption={true}
-                              containerTagName='div'
-                              protocol=''
-                              injectScript
-                              onLoading={() => {}}
-                              onSuccess={() => {}}
-                              onAfterRender={() => {}}
-                              onFailure={() => {}}
-                            />
                         </div>
                         <div className="matome-profile">
                             <p className='matome-paragraph'>名前 雪丸かるる</p>

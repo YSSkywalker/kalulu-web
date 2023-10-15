@@ -15,7 +15,7 @@ export default function UseTracking() {
       // アクセスしたパス (pathname)を送付する
       page: location.pathname,
     });
-  }, [location]);
+  }, [location, googleMeasurementId]);
 
   return null
 }
