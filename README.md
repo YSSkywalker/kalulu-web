@@ -2,11 +2,19 @@
 [雪丸かるるのWEBページ](https://kalulu.fans)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5ce6d38c-cb9d-4692-b162-865585ef243e/deploy-status)](https://app.netlify.com/sites/kalulu/deploys)
 
+## Investigating Vulnerabilities
+
+To investigate vulnerabilities in the project's dependencies and report the results, execute the following command:
+```
+$ npm audit --omit=dev
+```
+
 ## Environmental Variable
 
 |  KEY  |  VALUE  |
 | ---- | ---- |
 |  REACT_APP_GOOGLE_ANALYTICS_MEASUREMENT_ID  |  `G-**********`  |
+|  REACT_APP_PHOTO_BOOK_INVENTORY_MANAGING_APP_ENDPOINT_URL  |  `https://script.google.com/macros/s/*****/exec` |
 
 # Getting Started with Create React App
 
