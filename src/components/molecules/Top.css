@@ -18,7 +18,6 @@ body {
     height: 100%;
     display: flex;
     justify-content: center;
-    /* flex-direction: column; */
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: 30% 0% !important;
@@ -419,21 +418,17 @@ p.dots-background::after {
 }
 
 .profile-box p {
-    /* margin: 0;  */
     padding: 0;
 }
 
 .profile-name {
+    text-align: center;
     font-size: 38px;
     font-weight: 600;
     line-height: 1;
     color: #ff9500;
     margin: 6px 0 24px 0;
 }
-
-/* .profile-detail {
-    
-} */
 
 
 @media (min-width: calc(20vw + 850px)) {

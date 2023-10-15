@@ -44,7 +44,7 @@ class SNSLinks extends Component {
         const { links } = this.state;
         return (
             <div className='sns-section'>
-                <div className="container">
+                <div className="container-snslinks">
                     <div className="image-wrapper">
                         <img src={ProfileImage} alt="placeholder" />
                     </div>
