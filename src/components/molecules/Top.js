@@ -56,8 +56,10 @@ class Top extends React.Component {
                 </div>
                 <div className='top-works'>
                     <div className='works-contents'></div>
-                        <h2 className='title-center'>Works</h2>
-                    <iframe src="https://www.youtube-nocookie.com/embed/DEVZRDsSsNA" className='youtube-window' title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
+                    <h2 className='title-center'>Works</h2>
+                    <iframe src="https://open.spotify.com/embed/album/77ITiWghjAZcQYH1ZFEXje?utm_source=generator&theme=0" className='spotify-window' title="Spoify player" width="50%" height="352" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    {/* <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/77ITiWghjAZcQYH1ZFEXje?utm_source=generator&theme=0" title="Spoify player" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
+                    <iframe src="https://www.youtube.com/embed/pbF2PD-woPU?si=ZrbIGCIM4GoMWv2y" className='youtube-window' title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
                     </iframe>
                 </div>
                 <div className='top-sns'>
