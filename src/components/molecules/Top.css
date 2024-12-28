@@ -498,6 +498,13 @@ background-color: #ffefd8;
     height: 45vh;
     margin: 0 auto;
 } */
+.spotify-window {
+    border-radius:12px;
+    max-width: 560px;
+    width: 80vw;
+    display: block;
+    margin: 0 auto;
+}
 
 /* SNS */
 .top-sns {
