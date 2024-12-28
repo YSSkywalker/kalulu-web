@@ -34,7 +34,7 @@ class Matome extends React.Component {
                         {/* ここからSNSボタン */}
                         <center>
                             <div className="sotial">
-                                <a href="https://twitter.com/intent/tweet?url=https://kalulu.fans/Matome&text=自称美少女レイヤーの雪丸かるるがヤバいw高額月収・彼氏画像も!|コスプレイヤー暴露まとめ&via=kalulu_nya&related=kalulu_nya&hashtags=雪丸かるる" target="_blank" rel="noopener noreferrer" className="twitter">Twitter</a>
+                                <a href="https://twitter.com/share?url=https://kalulu.fans/Matome&text=自称美少女レイヤーの雪丸かるるがヤバいw高額月収・彼氏画像も!【コスプレイヤー暴露まとめ】&via=kalulu_nya&related=kalulu_nya&hashtags=雪丸かるる" target="_blank" rel="noopener noreferrer" className="twitter">Twitter</a>
                                 <a href="https://www.facebook.com/sharer.php?src=bm&u=https://kalulu.fans/Matome&t=自称美少女レイヤーの雪丸かるるがヤバいw高額月収・彼氏画像も!|コスプレイヤー暴露まとめ" target="_blank" rel="noopener noreferrer" className="facebook">Facebook</a>
                                 <a href="https://line.me/R/msg/text/?自称美少女レイヤーの雪丸かるるがヤバいw高額月収・彼氏画像も!|コスプレイヤー暴露まとめ https://kalulu.fans/Matome" target="_blank" rel="noopener noreferrer" className="line">LINE</a>
                             </div>
