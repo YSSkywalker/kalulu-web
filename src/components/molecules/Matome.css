@@ -104,8 +104,10 @@
 }
 
 .iphone-ss {
+    display: block;
     width: 90%;
     max-width: 480px;
+    margin: 0 auto;
 }
 
 /* SNS */
@@ -188,11 +190,14 @@
 }
 .april-fool {
     color: #8d8d8d;
+    text-align: center;
 }
 
 .ad-ikura {
+    display: block;
     width: 300px;
     max-width: 100%;
+    margin: 0 auto;
 }
 
 .matome-paragraph, .renewed, .main-title {
