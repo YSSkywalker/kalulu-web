@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Top.css';
-import { FaTwitterSquare, FaYoutubeSquare, FaLine, FaAngleRight } from "react-icons/fa"
+import { FaYoutubeSquare, FaLine, FaAngleRight } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6";
 
 import CornerDecoration from './img/corner-decoration.png'
 import ProfileImage from './img/profile-image.JPG'
@@ -66,7 +67,7 @@ class Top extends React.Component {
                 <div className='top-sns'>
                     <h2 className='title-center'>SNS</h2>
                     <div className='sns-icons'>
-                        <a href='https://twitter.com/kalulu_nya' target="_blank" rel="noopener noreferrer" className='twitter-icon sns-icon'><FaTwitterSquare /></a>
+                        <a href='https://twitter.com/kalulu_nya' target="_blank" rel="noopener noreferrer" className='twitter-icon sns-icon'><FaXTwitter /></a>
                         <a href='https://www.youtube.com/@KaluluYukimaru' target="_blank" rel="noopener noreferrer" className='youtube-icon sns-icon'><FaYoutubeSquare /></a>
                         <a href='https://lin.ee/9DzGkyr' target="_blank" rel="noopener noreferrer" className='line-icon sns-icon'><FaLine /></a>
                     </div>
