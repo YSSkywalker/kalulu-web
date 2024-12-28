@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './SNSLinks.css';
 import data from './json/snsLinks.json';
 import { FaInstagram, FaLine } from 'react-icons/fa';
-import { FaXTwitter, FaRegHeart, FaTwitch, FaYoutube, FaCloud } from "react-icons/fa6";
+import { FaXTwitter, FaRegHeart, FaTwitch, FaYoutube, FaCloud, FaTiktok } from "react-icons/fa6";
 import { BsHouseDoor } from "react-icons/bs"
 
 import ProfileImage from './img/profile_image_sns_links.jpg'
@@ -37,6 +37,8 @@ class SNSLinks extends Component {
                 return <FaTwitch />;
             case 'Mixi2':
                 return <FaCloud />;
+            case 'TikTok':
+                return <FaTiktok />;
             default:
                 return null;
         }
