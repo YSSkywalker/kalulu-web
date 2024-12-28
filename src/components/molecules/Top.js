@@ -67,7 +67,7 @@ class Top extends React.Component {
                     <h2 className='title-center'>SNS</h2>
                     <div className='sns-icons'>
                         <a href='https://twitter.com/kalulu_nya' target="_blank" rel="noopener noreferrer" className='twitter-icon sns-icon'><FaTwitterSquare /></a>
-                        <a href='http://www.youtube.com/channel/UCUTIT3Kj9mrdyMvR6EEY6IQ?sub_confirmation=1' target="_blank" rel="noopener noreferrer" className='youtube-icon sns-icon'><FaYoutubeSquare /></a>
+                        <a href='https://www.youtube.com/@KaluluYukimaru' target="_blank" rel="noopener noreferrer" className='youtube-icon sns-icon'><FaYoutubeSquare /></a>
                         <a href='https://lin.ee/9DzGkyr' target="_blank" rel="noopener noreferrer" className='line-icon sns-icon'><FaLine /></a>
                     </div>
                     <div className='sns-banners'>
