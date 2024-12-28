@@ -478,9 +478,6 @@ p.dots-background::after {
 padding: 10px 0 20px 0;
 background-color: #ffefd8;
 }
-.works-contents {
-    width: 100vw
-}
 .youtube-window {
     display: block;
     max-width: 560px;
@@ -489,15 +486,6 @@ background-color: #ffefd8;
     height: 45vw;
     margin: 0 auto;
 }
-/* .spotify-window {
-    display: block;
-    max-width: 560px;
-    width: 80vw;
-    max-height: 345px;
-    max-height: 345px;
-    height: 45vh;
-    margin: 0 auto;
-} */
 .spotify-window {
     border-radius:12px;
     max-width: 560px;
