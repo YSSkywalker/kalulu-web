@@ -2,6 +2,8 @@ import React from 'react';
 import {TwitterTweetEmbed} from 'react-twitter-embed';
 import { Helmet } from "react-helmet";
 import './Matome.css';
+import Ikura from './img/matome/ikura.png'
+import ScreenShot from './img/matome/screenshot.png'
 
 class Matome extends React.Component {
     render() {
@@ -32,7 +34,7 @@ class Matome extends React.Component {
                         {/* ここからSNSボタン */}
                         <center>
                             <div className="sotial">
-                                <a href="https://twitter.com/intent/tweet?url=https://kalulu.fans/Matome&text=自称美少女レイヤーの雪丸かるるがヤバいw高額月収・彼氏画像も!|コスプレイヤー暴露まとめ&via=kalulu_nya&related=kalulu_nya&hashtags=雪丸かるる" target="_blank" rel="noopener noreferrer" className="twitter">Twitter</a>
+                                <a href="https://twitter.com/share?url=https://kalulu.fans/Matome&text=自称美少女レイヤーの雪丸かるるがヤバいw高額月収・彼氏画像も!【コスプレイヤー暴露まとめ】&via=kalulu_nya&related=kalulu_nya&hashtags=雪丸かるる" target="_blank" rel="noopener noreferrer" className="twitter">Twitter</a>
                                 <a href="https://www.facebook.com/sharer.php?src=bm&u=https://kalulu.fans/Matome&t=自称美少女レイヤーの雪丸かるるがヤバいw高額月収・彼氏画像も!|コスプレイヤー暴露まとめ" target="_blank" rel="noopener noreferrer" className="facebook">Facebook</a>
                                 <a href="https://line.me/R/msg/text/?自称美少女レイヤーの雪丸かるるがヤバいw高額月収・彼氏画像も!|コスプレイヤー暴露まとめ https://kalulu.fans/Matome" target="_blank" rel="noopener noreferrer" className="line">LINE</a>
                             </div>
@@ -77,7 +79,7 @@ class Matome extends React.Component {
                         </div>
                     </div>
                     <a href="https://www.amazon.co.jp/hz/wishlist/ls/1WZSCAPPA8Z5W/ref=cm_go_nav_hz" target="_blank" rel="noopener noreferrer">
-                        <img src="http://drive.google.com/uc?export=view&id=1LkJNT9EXPOMD5pyiyx7touKnWSoXORbi" alt="いくらの広告" className="ad-ikura"></img>
+                        <img src={Ikura} alt="いくらの広告" className="ad-ikura"></img>
                     </a>
                     <div>
                         <div className="matome-sub-title-box">
@@ -153,13 +155,13 @@ class Matome extends React.Component {
                         <div>
                             <p className='matome-paragraph'>雪丸かるるは公式LINEアカウントを持っているようです。</p>
                             <p className='matome-paragraph'>ともだち追加して話しかけてみました!</p>
-                            <img src="http://drive.google.com/uc?export=view&id=1gGO5Qka0z9HaUF57ltPnli-3fnwgcjl9"  alt="LINEのスクリーンショット" className="iphone-ss"></img>
+                            <img src={ScreenShot}  alt="LINEのスクリーンショット" className="iphone-ss"></img>
                             <p className='matome-paragraph'>なんと個別に返信してくれるようです!</p>
                             <p className='matome-paragraph'>雪丸かるると個人的に話せるのは非常に魅力的ですね。</p>
                         </div>
                     </div>
                     <a href="https://www.amazon.co.jp/hz/wishlist/ls/1WZSCAPPA8Z5W/ref=cm_go_nav_hz" target="_blank" rel="noopener noreferrer">
-                        <img src="http://drive.google.com/uc?export=view&id=1LkJNT9EXPOMD5pyiyx7touKnWSoXORbi" alt="いくらの広告" className="ad-ikura"></img>
+                        <img src={Ikura} alt="いくらの広告" className="ad-ikura"></img>
                     </a>
                     <div>
                         <div className="matome-sub-title-box">
@@ -194,10 +196,10 @@ class Matome extends React.Component {
                             <p className='matome-paragraph'>みなさんが知っていることがあればぜひ教えてください!</p><br/>
                         </div>
                         <a href="https://www.amazon.co.jp/hz/wishlist/ls/1WZSCAPPA8Z5W/ref=cm_go_nav_hz" target="_blank" rel="noopener noreferrer">
-                            <img src="http://drive.google.com/uc?export=view&id=1LkJNT9EXPOMD5pyiyx7touKnWSoXORbi" alt="いくらの広告" className="ad-ikura"></img>
+                            <img src={Ikura} alt="いくらの広告" className="ad-ikura"></img>
                         </a>
                         <a href="https://www.amazon.co.jp/hz/wishlist/ls/1WZSCAPPA8Z5W/ref=cm_go_nav_hz" target="_blank" rel="noopener noreferrer">
-                            <img src="http://drive.google.com/uc?export=view&id=1LkJNT9EXPOMD5pyiyx7touKnWSoXORbi" alt="いくらの広告" className="ad-ikura"></img>
+                            <img src={Ikura} alt="いくらの広告" className="ad-ikura"></img>
                         </a>
                         <div>
                             <p className="april-fool">エープリルフールのジョークページだよ!</p><br/><br/>
