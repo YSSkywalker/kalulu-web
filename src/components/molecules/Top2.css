@@ -1,0 +1,675 @@
+/* ============================================================
+   Top2.css — 雪丸かるる Topページ v2
+   クラス名はすべて "t2-" プレフィックスで既存CSSと分離
+   ============================================================ */
+
+/* ── デザイントークン ─────────────────────────────────────── */
+.t2 {
+  /*
+   * 配色方針:
+   * 茶色・くすみを排除し、ハニーレモン×アプリコットで「明るいアイドル感」を出す。
+   * 暗セクションは茶系でなくディープネイビーにすることでステージ感を演出。
+   */
+
+  /* アクセントカラー */
+  --t2-amber:      #FFB627;   /* ブライトハニーイエロー（メインアクセント）*/
+  --t2-orange:     #FF8C42;   /* アプリコットオレンジ（CTA・アイコン）*/
+  --t2-gold:       #FFE01B;   /* レモンイエロー（ラインアクセントのみ）*/
+
+  /* 背景 */
+  --t2-bg-white:   #FFFFFF;   /* 白（About・Goods・Works）*/
+  --t2-bg-pale:    #FFFBF0;   /* 極淡レモン白（Works）*/
+  --t2-bg-lemon:   #FFF5CC;   /* ソフトレモン（Links）*/
+  --t2-bg-dark:    #0D0D20;   /* ディープネイビー（Hero・Gallery）*/
+
+  /* テキスト */
+  --t2-text-dark:  #222222;   /* ニュートラルダーク（茶みなし）*/
+  --t2-text-mid:   #666666;   /* ニュートラルグレー（茶みなし）*/
+
+  /* その他 */
+  --t2-radius:      8px;
+  --t2-section-pad: 5rem;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
+               'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  color: var(--t2-text-dark);
+  line-height: 1.75;
+}
+
+/* ── コンテナ ─────────────────────────────────────────────── */
+.t2-container {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* ── セクションタイトル共通 ───────────────────────────────── */
+.t2-section-title {
+  font-size: clamp(1.4rem, 4vw, 1.85rem);
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.15em;
+  margin: 0 0 2.5rem 0;
+  color: var(--t2-text-dark);
+}
+
+.t2-section-title::after {
+  content: '';
+  display: block;
+  width: 44px;
+  height: 3px;
+  background: linear-gradient(to right, var(--t2-amber), var(--t2-orange));
+  border-radius: 2px;
+  margin: 10px auto 0;
+}
+
+/* ダーク背景セクション用（Gallery） */
+.t2-section-title--light {
+  color: #fff;
+}
+
+.t2-section-title--light::after {
+  background: linear-gradient(to right, var(--t2-gold), var(--t2-amber));
+}
+
+/* ── プレースホルダー共通 ─────────────────────────────────── */
+.t2-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  border-radius: var(--t2-radius);
+  white-space: pre-line;
+  /* 画像が入ったら <img> タグに差し替えて .t2-placeholder ごと削除する */
+}
+
+/* Hero用: ネイビー系で統一（茶色グラデーションを廃止） */
+.t2-placeholder--hero {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, #0A0A1E 0%, #1A1540 60%, #080818 100%);
+  color: rgba(255, 182, 39, 0.5);
+  border: none;
+  border-radius: 0;
+}
+
+/* プロフィール用: 淡いレモンクリームで清潔感 */
+.t2-placeholder--profile {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFF5CC 0%, #FFE88A 100%);
+  color: #B88A00;
+  border: 2px dashed var(--t2-amber);
+}
+
+/* Gallery用: ネイビー背景に合わせた薄いボーダー */
+.t2-placeholder--gallery {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px dashed rgba(255, 182, 39, 0.4);
+  color: rgba(255, 182, 39, 0.65);
+}
+
+/* Goods用: 白背景に合わせたレモン系プレースホルダー */
+.t2-placeholder--goods {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #FFF9E0 0%, #FFF0A0 100%);
+  border: 2px dashed rgba(255, 182, 39, 0.5);
+  color: #B88A00;
+}
+
+/* ── ボタン共通 ───────────────────────────────────────────── */
+
+/* アウトラインボタン（Gallery CTA等） */
+.t2-btn-outline {
+  display: inline-block;
+  padding: 0.75rem 2.25rem;
+  border: 2px solid var(--t2-amber);
+  color: var(--t2-amber);
+  border-radius: 3px;
+  font-size: 0.875rem;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: background 0.2s ease, color 0.2s ease;
+  background: transparent;
+}
+
+.t2-btn-outline:hover {
+  background: var(--t2-amber);
+  color: #0D0D20;
+}
+
+/* 塗りつぶしボタン（Goods CTA等） */
+.t2-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2.5rem;
+  background: linear-gradient(to right, var(--t2-amber), var(--t2-orange));
+  color: #fff;
+  border-radius: 50px;
+  font-size: 0.925rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s ease, transform 0.2s ease,
+              box-shadow 0.2s ease;
+  box-shadow: 0 4px 16px rgba(255, 140, 66, 0.35);
+}
+
+.t2-btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 140, 66, 0.45);
+}
+
+.t2-btn-icon {
+  font-size: 1rem;
+}
+
+/* ================================================================
+   Hero Section
+   ================================================================ */
+.t2-hero {
+  position: relative;
+  height: 100svh;     /* svh: スマホアドレスバーを除いたビューポート高さ */
+  min-height: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 背景画像レイヤー */
+.t2-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-color: var(--t2-bg-dark);
+  background-size: cover;
+  background-position: center top;
+  /* 画像が用意できたら Top2.js 側の style={{ backgroundImage: ... }} をコメント解除 */
+}
+
+/* グラデーションオーバーレイ＋コンテンツ */
+.t2-hero-overlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  padding-bottom: 80px;
+  background: linear-gradient(
+    to bottom,
+    transparent              0%,
+    rgba(13, 13, 32, 0.08)  40%,
+    rgba(13, 13, 32, 0.55)  75%,
+    rgba(13, 13, 32, 0.78) 100%
+  );
+}
+
+.t2-hero-content {
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.t2-hero-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--t2-amber);
+  margin: 0 0 0.6rem 0;
+  font-weight: 500;
+}
+
+.t2-hero-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 0 0 0.8rem 0;
+  line-height: 1.1;
+}
+
+.t2-hero-name-ja {
+  font-size: clamp(2.2rem, 9vw, 3.75rem);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.08em;
+}
+
+.t2-hero-name-en {
+  font-size: clamp(0.75rem, 2.5vw, 1rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+.t2-hero-tagline {
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 0 1.75rem 0;
+  letter-spacing: 0.06em;
+}
+
+/* Hero SNSアイコン */
+.t2-hero-sns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.t2-hero-sns-link {
+  font-size: 1.9rem;
+  color: rgba(255, 255, 255, 0.65);
+  display: flex;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.t2-hero-sns-link:hover {
+  color: var(--t2-amber);
+  transform: scale(1.18);
+}
+
+/* スクロールインジケーター */
+.t2-scroll-indicator {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  animation: t2-bounce 2.4s ease-in-out infinite;
+}
+
+@keyframes t2-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0);  opacity: 0.45; }
+  50%       { transform: translateX(-50%) translateY(9px); opacity: 0.85; }
+}
+
+/* ================================================================
+   About / Profile Section
+   ================================================================ */
+.t2-about {
+  background-color: var(--t2-bg-white);
+  padding: var(--t2-section-pad) 0;
+}
+
+.t2-about-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+@media (min-width: 680px) {
+  .t2-about-inner {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3.5rem;
+  }
+}
+
+.t2-about-photo {
+  flex-shrink: 0;
+}
+
+.t2-profile-img {
+  display: block;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 4px solid var(--t2-amber);
+  box-shadow:
+    0 0 0 8px rgba(255, 182, 39, 0.18),
+    0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+.t2-about-body {
+  flex: 1;
+}
+
+.t2-about-name {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: 700;
+  margin: 0 0 0.2rem 0;
+  letter-spacing: 0.06em;
+  color: var(--t2-text-dark);
+}
+
+.t2-about-name-en {
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--t2-amber);
+  margin: 0 0 1.25rem 0;
+}
+
+.t2-about-desc {
+  font-size: 0.95rem;
+  color: var(--t2-text-mid);
+  line-height: 1.9;
+  margin: 0 0 1rem 0;
+}
+
+.t2-about-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.t2-about-meta li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.875rem;
+  color: var(--t2-text-mid);
+}
+
+.t2-about-meta li::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  font-size: 0.65rem;
+  color: var(--t2-amber);
+}
+
+/* ================================================================
+   Gallery Section
+   茶色グラデーションをディープネイビーに変更 → ステージ照明感
+   ================================================================ */
+.t2-gallery {
+  background: linear-gradient(160deg, #0A0A1E 0%, #151535 60%, #080818 100%);
+  padding: var(--t2-section-pad) 0;
+}
+
+.t2-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  margin-bottom: 2.25rem;
+}
+
+@media (min-width: 560px) {
+  .t2-gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+}
+
+.t2-gallery-cell {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: var(--t2-radius);
+}
+
+.t2-gallery-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.t2-gallery-cell:hover .t2-gallery-img {
+  transform: scale(1.05);
+}
+
+.t2-gallery-cta {
+  text-align: center;
+}
+
+/* ================================================================
+   Works Section
+   ================================================================ */
+.t2-works {
+  background-color: var(--t2-bg-pale);
+  padding: var(--t2-section-pad) 0;
+}
+
+.t2-works-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 780px) {
+  .t2-works-grid {
+    flex-direction: row;
+    gap: 2.5rem;
+    align-items: flex-start;
+  }
+
+  .t2-works-block {
+    flex: 1;
+  }
+}
+
+.t2-works-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--t2-orange);
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+/* YouTube レスポンシブラッパー（16:9） */
+.t2-video-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--t2-radius);
+  background: #000;
+}
+
+.t2-video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.t2-spotify {
+  display: block;
+  border-radius: 12px;
+}
+
+/* ================================================================
+   Goods / Suzuri Section
+   Works（淡いレモン白）の後に白を置き、メリハリをつける。
+   ================================================================ */
+.t2-goods {
+  background-color: var(--t2-bg-white);
+  padding: var(--t2-section-pad) 0;
+}
+
+.t2-goods-desc {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--t2-text-mid);
+  line-height: 1.85;
+  margin: 0 0 2.5rem 0;
+}
+
+/* 商品カードグリッド */
+.t2-goods-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 480px) {
+  .t2-goods-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* 商品カード（リンク要素） */
+.t2-goods-card {
+  display: block;
+  text-decoration: none;
+  color: var(--t2-text-dark);
+  border-radius: var(--t2-radius);
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(255, 182, 39, 0.2);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.t2-goods-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(255, 140, 66, 0.18);
+}
+
+/* 商品画像エリア（正方形） */
+.t2-goods-img-wrap {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.t2-goods-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.t2-goods-card:hover .t2-goods-img {
+  transform: scale(1.04);
+}
+
+/* 商品名 */
+.t2-goods-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+  margin: 0;
+  color: var(--t2-text-dark);
+  letter-spacing: 0.04em;
+}
+
+/* Goods CTA */
+.t2-goods-cta {
+  text-align: center;
+}
+
+/* ================================================================
+   Links / SNS Section
+   ================================================================ */
+.t2-links {
+  background-color: var(--t2-bg-lemon);
+  padding: var(--t2-section-pad) 0;
+}
+
+/* SNSアイコンリスト */
+.t2-sns-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.75rem 0;
+}
+
+.t2-sns-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+  color: var(--t2-text-dark);
+  transition: transform 0.2s ease;
+}
+
+.t2-sns-item:hover {
+  transform: translateY(-4px);
+}
+
+.t2-sns-icon {
+  font-size: 2.75rem;
+  color: var(--t2-orange);
+  transition: color 0.2s ease;
+}
+
+.t2-sns-item:hover .t2-sns-icon {
+  color: var(--t2-amber);
+}
+
+.t2-sns-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--t2-text-mid);
+}
+
+/* バナー */
+.t2-banners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.t2-banner-link {
+  display: block;
+  width: 295px;
+  max-width: 90vw;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.t2-banner-link:hover {
+  opacity: 0.88;
+  transform: translateY(-3px);
+}
+
+.t2-banner-link img {
+  display: block;
+  width: 100%;
+}
+
+/* 言語リンク */
+.t2-lang {
+  text-align: right;
+  padding-right: 0.5rem;
+}
+
+.t2-lang-link {
+  font-size: 0.82rem;
+  color: var(--t2-text-mid);
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  transition: color 0.2s ease;
+}
+
+.t2-lang-link:hover {
+  color: var(--t2-orange);
+}
