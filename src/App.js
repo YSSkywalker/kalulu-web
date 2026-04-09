@@ -6,6 +6,7 @@ import Footer from './components/molecules/Footer'
 import ScrollToTop from './components/molecules/ScrollToTop'
 import UseTracking from './components/molecules/UseTracking'
 import Top from './components/molecules/Top'
+import Top2 from './components/molecules/Top2'
 import EN from './components/molecules/EN'
 import Matome from './components/molecules/Matome'
 import News from './components/molecules/News'
@@ -23,6 +24,7 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route exact path={`/`} element={<Top />} />
+        <Route path={'/Top2'} element={<Top2 />} />
         <Route path={'/EN'} element={<EN />} />
         <Route path={'/Matome'} element={<Matome />} />
         <Route path={'/News'} element={<News />} />
