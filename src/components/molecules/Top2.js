@@ -6,6 +6,7 @@ import {
   FaInstagram,
   FaLine,
   FaAngleDown,
+  FaShoppingBag,
 } from 'react-icons/fa';
 import './Top2.css';
 
@@ -25,7 +26,19 @@ import InstagramBanner from './img/instagram-banner.png';
 // import Gallery5 from './img/gallery-5.jpg';
 // import Gallery6 from './img/gallery-6.jpg';
 
-// ── ギャラリーデータ（画像ができたら src を差し替える） ──────────
+// ── グッズ画像（3枚。用意できたらコメントアウトを外す） ─────────
+// import Goods1 from './img/goods-1.jpg';
+// import Goods2 from './img/goods-2.jpg';
+// import Goods3 from './img/goods-3.jpg';
+
+// ================================================================
+// 定数 — リンクや商品データはここだけ変更すれば全体に反映される
+// ================================================================
+
+// Suzuri ショップURL（後から差し替える場合はここだけ修正）
+const SUZURI_SHOP_URL = 'https://suzuri.jp/kalulu_nya';
+
+// ギャラリーデータ（画像ができたら src を差し替える）
 const GALLERY_ITEMS = [
   { id: 1, src: null, alt: 'コスプレ写真 1' },
   { id: 2, src: null, alt: 'コスプレ写真 2' },
@@ -33,11 +46,20 @@ const GALLERY_ITEMS = [
   { id: 4, src: null, alt: 'コスプレ写真 4' },
   { id: 5, src: null, alt: 'コスプレ写真 5' },
   { id: 6, src: null, alt: 'コスプレ写真 6' },
-  // 画像が揃ったら以下のようにコメントアウトを解除して差し替える:
+  // 画像が揃ったら以下のようにコメントアウトを解除:
   // { id: 1, src: Gallery1, alt: 'コスプレ写真 1' },
 ];
 
-// ── SNSリンク定義 ───────────────────────────────────────────────
+// グッズデータ（商品画像と名前を後から差し替える）
+const GOODS_ITEMS = [
+  { id: 1, src: null, name: 'Tシャツ', label: '商品画像 1\n（1:1 推奨）' },
+  { id: 2, src: null, name: 'トートバッグ', label: '商品画像 2\n（1:1 推奨）' },
+  { id: 3, src: null, name: 'アクリルスタンド', label: '商品画像 3\n（1:1 推奨）' },
+  // 画像が揃ったら以下のようにコメントアウトを解除:
+  // { id: 1, src: Goods1, name: 'Tシャツ', label: 'Tシャツ' },
+];
+
+// SNSリンク定義
 const SNS_LINKS = [
   {
     href: 'https://twitter.com/kalulu_nya',
@@ -65,6 +87,9 @@ const SNS_LINKS = [
   },
 ];
 
+// ================================================================
+// Component
+// ================================================================
 function Top2() {
   return (
     <div className="t2">
@@ -73,14 +98,14 @@ function Top2() {
           Hero Section
           ================================================================ */}
       <section className="t2-hero" aria-label="メインビジュアル">
-        {/* 背景画像エリア。HeroImage が用意できたら下記 style を差し替える */}
+        {/* 背景画像エリア。HeroImage が用意できたら style を差し替える */}
         <div
           className="t2-hero-bg"
           // style={{ backgroundImage: `url(${HeroImage})` }}
           role="img"
           aria-label="雪丸かるるのメイン写真"
         >
-          {/* ↓ 画像が入ったら削除する */}
+          {/* 画像が入ったら削除する */}
           <div className="t2-placeholder t2-placeholder--hero">
             FV用メイン画像<br />
             （縦長 2:3 または 9:16 推奨 / 1200px以上）
@@ -238,6 +263,61 @@ function Top2() {
                 className="t2-spotify"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================================================================
+          Goods / Suzuri Section
+          Works の後・Links の前に配置。
+          活動の流れを受けて「グッズも作ってます」と自然につなぎ、
+          そのままSNSフォロー・外部導線へ誘導する。
+          ================================================================ */}
+      <section className="t2-goods" aria-labelledby="t2-goods-title">
+        <div className="t2-container">
+          <h2 className="t2-section-title" id="t2-goods-title">Goods</h2>
+
+          <p className="t2-goods-desc">
+            オリジナルグッズを SUZURI で販売中！<br />
+            Tシャツやトートバッグなど、日常使いしやすいアイテムが揃っています。
+          </p>
+
+          {/* 商品カードグリッド */}
+          <div className="t2-goods-grid">
+            {GOODS_ITEMS.map(({ id, src, name, label }) => (
+              <a
+                key={id}
+                href={SUZURI_SHOP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="t2-goods-card"
+                aria-label={`${name} — SUZURIショップへ（新しいタブで開きます）`}
+              >
+                <div className="t2-goods-img-wrap">
+                  {src ? (
+                    <img src={src} alt={name} className="t2-goods-img" loading="lazy" />
+                  ) : (
+                    <div className="t2-placeholder t2-placeholder--goods">
+                      {label}
+                    </div>
+                  )}
+                </div>
+                <p className="t2-goods-name">{name}</p>
+              </a>
+            ))}
+          </div>
+
+          {/* SUZURIへのCTAボタン */}
+          <div className="t2-goods-cta">
+            <a
+              href={SUZURI_SHOP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="t2-btn-primary"
+            >
+              <FaShoppingBag className="t2-btn-icon" aria-hidden="true" />
+              SUZURIショップを見る
+            </a>
           </div>
         </div>
       </section>
